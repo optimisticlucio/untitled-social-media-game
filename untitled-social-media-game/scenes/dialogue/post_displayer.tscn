@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://cxiiw6agxghph"]
+
+[node name="PostDisplayer" type="Node2D"]
