@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://cxiiw6agxghph"]
+[gd_scene load_steps=2 format=3 uid="uid://cxiiw6agxghph"]
+
+[ext_resource type="Script" uid="uid://dwpreb7juf8ky" path="res://scripts/dialogue/dialogue_window.gd" id="1_dg2lb"]
 
 [node name="PostDisplayer" type="Node2D"]
+script = ExtResource("1_dg2lb")

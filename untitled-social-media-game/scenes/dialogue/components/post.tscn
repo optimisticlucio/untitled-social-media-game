@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c3ryng51mkmcm"]
-
-[ext_resource type="Script" uid="uid://xh8bj7xg4p5o" path="res://scripts/dialogue/post.gd" id="1_yogka"]
-
-[node name="Post" type="Node2D"]
-script = ExtResource("1_yogka")

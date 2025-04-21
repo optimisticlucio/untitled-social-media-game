@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0sqyp7eitd3p"]
+[gd_scene load_steps=4 format=3 uid="uid://b0sqyp7eitd3p"]
 
 [ext_resource type="Script" uid="uid://dxpybdwalu787" path="res://scripts/game_manager.gd" id="1_hwd4i"]
+[ext_resource type="PackedScene" uid="uid://cxiiw6agxghph" path="res://scenes/dialogue/post_displayer.tscn" id="2_udu3i"]
+[ext_resource type="Texture2D" uid="uid://sf6t1pypm525" path="res://assets/img/test_img_coffee.png" id="3_oo155"]
 
 [node name="GameManager" type="Node2D"]
 script = ExtResource("1_hwd4i")
+
+[node name="PostDisplayer" parent="." instance=ExtResource("2_udu3i")]
+img = ExtResource("3_oo155")

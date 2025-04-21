@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Untitled Social Media Game"
+run/main_scene="uid://cxiiw6agxghph"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
