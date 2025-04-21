@@ -1,20 +1,14 @@
 extends Node
 class_name DialogueWindow
 
-@export var paths: Array[DialoguePath]
+@export var displayed_post: Post
 
 
 func _ready():
 	setup_variables()
-	
-	if Engine.is_editor_hint():
-		show_in_editor()
 
 func setup_variables():
 	pass
-
-func show_in_editor():
-	show_post_with_comments();
 
 func show_dialogue_paths():
 	# TODO: WRITE!
