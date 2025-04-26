@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="User" load_steps=2 format=3 uid="uid://odrx744jqk4x"]
+
+[ext_resource type="Script" uid="uid://c7r2vbi24kh11" path="res://scripts/dialogue/user.gd" id="1_e0h02"]
+
+[resource]
+script = ExtResource("1_e0h02")
+username = "mom<3"
+metadata/_custom_type_script = "uid://c7r2vbi24kh11"

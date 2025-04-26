@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://blxketcaxxrdi"]
 
 [ext_resource type="Script" uid="uid://bd8k1dyo61fn8" path="res://scripts/test_show_dialogue.gd" id="1_wnj11"]
+[ext_resource type="Resource" uid="uid://bup25txy4u6ov" path="res://resources/posts/selection_window_first_post.tres" id="2_73jmb"]
 [ext_resource type="Texture2D" uid="uid://0o4003fqeepu" path="res://assets/img/test_susie.png" id="2_u0tim"]
-[ext_resource type="Resource" uid="uid://dk1vq0dlhgfn" path="res://resources/posts/grandmas_couch.tres" id="2_yugw6"]
 [ext_resource type="Texture2D" uid="uid://sf6t1pypm525" path="res://assets/img/test_img_coffee.png" id="3_cttba"]
 [ext_resource type="PackedScene" uid="uid://dop1w0ppp7jpt" path="res://scenes/test_comment.tscn" id="5_2bquf"]
 [ext_resource type="PackedScene" uid="uid://crux41ld1b4am" path="res://scenes/test_option.tscn" id="6_73jmb"]
@@ -18,7 +18,7 @@ fill_from = Vector2(0.5, 0.5)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_wnj11")
-initialPost = ExtResource("2_yugw6")
+initialPost = ExtResource("2_73jmb")
 
 [node name="UserUsername" type="Label" parent="."]
 offset_left = 1054.0

@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Post" load_steps=11 format=3 uid="uid://dvxgtyubtym6q"]
+
+[ext_resource type="Script" uid="uid://cb3517j678pr5" path="res://scripts/dialogue/comment.gd" id="1_s2dco"]
+[ext_resource type="Script" uid="uid://dt2yiymblukj8" path="res://scripts/dialogue/dialogue_path.gd" id="2_kd5rw"]
+[ext_resource type="Resource" uid="uid://odrx744jqk4x" path="res://resources/users/mom.tres" id="2_tnkp7"]
+[ext_resource type="Texture2D" uid="uid://sf6t1pypm525" path="res://assets/img/test_img_coffee.png" id="3_kd5rw"]
+[ext_resource type="Script" uid="uid://bf22ll2o4qmne" path="res://scripts/dialogue/post.gd" id="3_sn7pp"]
+[ext_resource type="Resource" uid="uid://dk1vq0dlhgfn" path="res://resources/posts/grandmas_couch.tres" id="4_a4pik"]
+
+[sub_resource type="Resource" id="Resource_kd5rw"]
+script = ExtResource("1_s2dco")
+text = "מושלם! ♥ ♥ ♥ ♥ ♥ "
+poster = ExtResource("2_tnkp7")
+metadata/_custom_type_script = "uid://cb3517j678pr5"
+
+[sub_resource type="Resource" id="Resource_bni0d"]
+script = ExtResource("2_kd5rw")
+text = " אין מושלם ממך!"
+leads_to = ExtResource("4_a4pik")
+metadata/_custom_type_script = "uid://dt2yiymblukj8"
+
+[sub_resource type="Resource" id="Resource_qihk3"]
+script = ExtResource("2_kd5rw")
+text = "3>"
+leads_to = ExtResource("4_a4pik")
+metadata/_custom_type_script = "uid://dt2yiymblukj8"
+
+[sub_resource type="Resource" id="Resource_e3528"]
+script = ExtResource("2_kd5rw")
+text = "..."
+leads_to = ExtResource("4_a4pik")
+metadata/_custom_type_script = "uid://dt2yiymblukj8"
+
+[resource]
+script = ExtResource("3_sn7pp")
+text = "ממלאים את המצברים!"
+img = ExtResource("3_kd5rw")
+amount_of_likes = 0
+comments = Array[ExtResource("1_s2dco")]([SubResource("Resource_kd5rw")])
+dialogue_options = Array[ExtResource("2_kd5rw")]([SubResource("Resource_bni0d"), SubResource("Resource_qihk3"), SubResource("Resource_e3528")])
+metadata/_custom_type_script = "uid://bf22ll2o4qmne"

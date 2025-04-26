@@ -1,13 +1,43 @@
-[gd_resource type="Resource" script_class="Post" load_steps=4 format=3 uid="uid://bthsfmqmqmj3u"]
+[gd_resource type="Resource" script_class="Post" load_steps=10 format=3 uid="uid://bthsfmqmqmj3u"]
 
 [ext_resource type="Script" uid="uid://cb3517j678pr5" path="res://scripts/dialogue/comment.gd" id="1_3svmh"]
 [ext_resource type="Script" uid="uid://dt2yiymblukj8" path="res://scripts/dialogue/dialogue_path.gd" id="2_sfmgb"]
 [ext_resource type="Script" uid="uid://bf22ll2o4qmne" path="res://scripts/dialogue/post.gd" id="3_vvb0y"]
 
+[sub_resource type="Resource" id="Resource_3svmh"]
+script = ExtResource("1_3svmh")
+text = "שמעתי שזה ספר מוש"
+metadata/_custom_type_script = "uid://cb3517j678pr5"
+
+[sub_resource type="Resource" id="Resource_sfmgb"]
+script = ExtResource("1_3svmh")
+text = "נייס! אני אגנוב את זה מתישהו"
+metadata/_custom_type_script = "uid://cb3517j678pr5"
+
+[sub_resource type="Resource" id="Resource_vvb0y"]
+script = ExtResource("1_3svmh")
+text = "ספר נוראי."
+metadata/_custom_type_script = "uid://cb3517j678pr5"
+
+[sub_resource type="Resource" id="Resource_1lmlw"]
+script = ExtResource("2_sfmgb")
+text = "מאיפה אתה יודע? קראת?"
+metadata/_custom_type_script = "uid://dt2yiymblukj8"
+
+[sub_resource type="Resource" id="Resource_1wtg1"]
+script = ExtResource("2_sfmgb")
+text = "קראתי ואהבתי!"
+metadata/_custom_type_script = "uid://dt2yiymblukj8"
+
+[sub_resource type="Resource" id="Resource_gqb02"]
+script = ExtResource("2_sfmgb")
+text = "..."
+metadata/_custom_type_script = "uid://dt2yiymblukj8"
+
 [resource]
 script = ExtResource("3_vvb0y")
 text = "סוף סוף מצאתי את [שם ספר], קשה למצוא!"
 amount_of_likes = 0
-comments = Array[ExtResource("1_3svmh")]([null, null, null])
-dialogue_options = Array[ExtResource("2_sfmgb")]([])
+comments = Array[ExtResource("1_3svmh")]([SubResource("Resource_3svmh"), SubResource("Resource_sfmgb"), SubResource("Resource_vvb0y")])
+dialogue_options = Array[ExtResource("2_sfmgb")]([SubResource("Resource_1lmlw"), SubResource("Resource_1wtg1"), SubResource("Resource_gqb02")])
 metadata/_custom_type_script = "uid://bf22ll2o4qmne"
