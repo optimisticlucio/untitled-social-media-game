@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="User" load_steps=3 format=3 uid="uid://ixbdnweivkhx"]
+
+[ext_resource type="Texture2D" uid="uid://0o4003fqeepu" path="res://assets/img/test_susie.png" id="1_i5o71"]
+[ext_resource type="Script" uid="uid://c7r2vbi24kh11" path="res://scripts/dialogue/user.gd" id="1_lrfax"]
+
+[resource]
+script = ExtResource("1_lrfax")
+username = "TEST"
+profile_picture = ExtResource("1_i5o71")
+metadata/_custom_type_script = "uid://c7r2vbi24kh11"

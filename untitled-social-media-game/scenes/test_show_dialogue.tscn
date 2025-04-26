@@ -1,0 +1,100 @@
+[gd_scene load_steps=7 format=3 uid="uid://blxketcaxxrdi"]
+
+[ext_resource type="Script" uid="uid://bd8k1dyo61fn8" path="res://scripts/test_show_dialogue.gd" id="1_wnj11"]
+[ext_resource type="Texture2D" uid="uid://0o4003fqeepu" path="res://assets/img/test_susie.png" id="2_u0tim"]
+[ext_resource type="Resource" uid="uid://dk1vq0dlhgfn" path="res://resources/posts/grandmas_couch.tres" id="2_yugw6"]
+[ext_resource type="Texture2D" uid="uid://sf6t1pypm525" path="res://assets/img/test_img_coffee.png" id="3_cttba"]
+
+[sub_resource type="Gradient" id="Gradient_cttba"]
+offsets = PackedFloat32Array(0.7, 0.7)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_yugw6"]
+gradient = SubResource("Gradient_cttba")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_wnj11")
+initialPost = ExtResource("2_yugw6")
+
+[node name="UserUsername" type="Label" parent="."]
+offset_left = 1054.0
+offset_top = 93.0
+offset_right = 1141.0
+offset_bottom = 116.0
+text = "USERNAME"
+
+[node name="PostText" type="RichTextLabel" parent="."]
+offset_left = 516.0
+offset_top = 24.0
+offset_right = 1038.0
+offset_bottom = 193.0
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id massa ante. Fusce cursus ipsum sed sapien feugiat commodo. Quisque ut finibus sapien. Morbi lacinia ex et ex sollicitudin, at tempor neque imperdiet. Praesent congue ut mi id dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac viverra velit. Suspendisse bibendum elementum sem, at faucibus nisl pretium vel."
+
+[node name="CircleMask" type="Sprite2D" parent="."]
+clip_children = 1
+position = Vector2(1100, 56)
+texture = SubResource("GradientTexture2D_yugw6")
+
+[node name="UserProfilePic" type="Sprite2D" parent="CircleMask"]
+position = Vector2(-1, -2)
+scale = Vector2(0.312207, 0.312207)
+texture = ExtResource("2_u0tim")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 518.0
+offset_top = 204.0
+offset_right = 1055.0
+offset_bottom = 442.0
+texture = ExtResource("3_cttba")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Comment3" type="Node2D" parent="."]
+position = Vector2(32, 215)
+
+[node name="Text" type="RichTextLabel" parent="Comment3"]
+offset_left = 1.0
+offset_right = 394.0
+offset_bottom = 65.0
+text = "Ski-bi dibby dib yo da dub dub Yo da dub dub Ski-bi dibby dib yo da dub dub Yo da dub dub"
+
+[node name="Comment2" type="Node2D" parent="."]
+position = Vector2(29, 120)
+
+[node name="Text" type="RichTextLabel" parent="Comment2"]
+offset_left = 1.0
+offset_right = 394.0
+offset_bottom = 65.0
+text = "Ski-bi dibby dib yo da dub dub Yo da dub dub Ski-bi dibby dib yo da dub dub Yo da dub dub"
+
+[node name="Comment" type="Node2D" parent="."]
+position = Vector2(31, 33)
+
+[node name="Text" type="RichTextLabel" parent="Comment"]
+offset_left = 1.0
+offset_right = 394.0
+offset_bottom = 65.0
+text = "Ski-bi dibby dib yo da dub dub Yo da dub dub Ski-bi dibby dib yo da dub dub Yo da dub dub"
+
+[node name="Option1" type="Button" parent="."]
+offset_left = 122.0
+offset_top = 503.0
+offset_right = 435.0
+offset_bottom = 600.0
+text = "Option 1 Not Set"
+
+[node name="Option2" type="Button" parent="."]
+offset_left = 457.0
+offset_top = 503.0
+offset_right = 714.0
+offset_bottom = 600.0
+text = "Option 2 Not Set"
+
+[node name="Option3" type="Button" parent="."]
+offset_left = 750.0
+offset_top = 501.0
+offset_right = 1007.0
+offset_bottom = 598.0
+text = "Option 3 Not Set"
