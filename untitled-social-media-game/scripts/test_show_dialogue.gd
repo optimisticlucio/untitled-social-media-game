@@ -37,8 +37,8 @@ func set_post_data() -> void:
 		user_username.text = currentPost.posting_user.username;
 		user_profilepic.texture = currentPost.posting_user.profile_picture;
 	else:
-		user_username.text = preload("res://resources/test_user.tres").username;
-		user_profilepic.texture = preload("res://resources/test_user.tres").profile_picture;
+		user_username.text = "";
+		user_profilepic.texture = null;
 	
 	for comment_index in range(comments.size()):
 		if (currentPost.comments.size() > comment_index):
