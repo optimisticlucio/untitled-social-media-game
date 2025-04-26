@@ -13,10 +13,9 @@ func _ready():
 	if (initialPost == null):
 		push_error("INITIAL POST NOT SET") 
 	
-	currentPost = initialPost;
 	get_nodes();
-	set_post_data();
-
+	
+	change_active_post(initialPost);
 
 func get_nodes() -> void:
 	user_username = get_node("UserUsername")
@@ -34,8 +33,12 @@ func set_post_data() -> void:
 	post_text.text = currentPost.text;
 	post_image.texture = currentPost.img;
 	
-	user_username.text = currentPost.posting_user.username;
-	user_profilepic.texture = currentPost.posting_user.profile_picture;
+	if currentPost.posting_user:
+		user_username.text = currentPost.posting_user.username;
+		user_profilepic.texture = currentPost.posting_user.profile_picture;
+	else:
+		user_username.text = preload("res://resources/test_user.tres").username;
+		user_profilepic.texture = preload("res://resources/test_user.tres").profile_picture;
 	
 	for comment_index in range(comments.size()):
 		if (currentPost.comments.size() > comment_index):
@@ -44,7 +47,15 @@ func set_post_data() -> void:
 			comments[comment_index].text = "COMMENT DOES NOT EXIST"
 	
 	for option_index in range(options.size()):
+		for connection in options[option_index].pressed.get_connections():
+			options[option_index].pressed.disconnect(connection.callable)
+		
 		if (currentPost.dialogue_options.size() > option_index):
 			options[option_index].text = currentPost.dialogue_options[option_index].text
+			options[option_index].pressed.connect(change_active_post.bind(currentPost.dialogue_options[option_index].leads_to))
 		else:
 			options[option_index].text = "MISSING OPTION, DO NOT CLICK IT WON'T WORK"
+
+func change_active_post(next_post: Post):
+	currentPost = next_post;
+	set_post_data();

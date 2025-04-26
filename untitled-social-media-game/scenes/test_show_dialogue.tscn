@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://blxketcaxxrdi"]
+[gd_scene load_steps=9 format=3 uid="uid://blxketcaxxrdi"]
 
 [ext_resource type="Script" uid="uid://bd8k1dyo61fn8" path="res://scripts/test_show_dialogue.gd" id="1_wnj11"]
 [ext_resource type="Texture2D" uid="uid://0o4003fqeepu" path="res://assets/img/test_susie.png" id="2_u0tim"]
 [ext_resource type="Resource" uid="uid://dk1vq0dlhgfn" path="res://resources/posts/grandmas_couch.tres" id="2_yugw6"]
 [ext_resource type="Texture2D" uid="uid://sf6t1pypm525" path="res://assets/img/test_img_coffee.png" id="3_cttba"]
+[ext_resource type="PackedScene" uid="uid://dop1w0ppp7jpt" path="res://scenes/test_comment.tscn" id="5_2bquf"]
+[ext_resource type="PackedScene" uid="uid://crux41ld1b4am" path="res://scenes/test_option.tscn" id="6_73jmb"]
 
 [sub_resource type="Gradient" id="Gradient_cttba"]
 offsets = PackedFloat32Array(0.7, 0.7)
@@ -51,50 +53,29 @@ texture = ExtResource("3_cttba")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Comment3" type="Node2D" parent="."]
-position = Vector2(32, 215)
+[node name="Comment3" parent="." instance=ExtResource("5_2bquf")]
+position = Vector2(30, 172)
 
-[node name="Text" type="RichTextLabel" parent="Comment3"]
-offset_left = 1.0
-offset_right = 394.0
-offset_bottom = 65.0
-text = "Ski-bi dibby dib yo da dub dub Yo da dub dub Ski-bi dibby dib yo da dub dub Yo da dub dub"
+[node name="Comment2" parent="." instance=ExtResource("5_2bquf")]
+position = Vector2(31, 97)
 
-[node name="Comment2" type="Node2D" parent="."]
-position = Vector2(29, 120)
-
-[node name="Text" type="RichTextLabel" parent="Comment2"]
-offset_left = 1.0
-offset_right = 394.0
-offset_bottom = 65.0
-text = "Ski-bi dibby dib yo da dub dub Yo da dub dub Ski-bi dibby dib yo da dub dub Yo da dub dub"
-
-[node name="Comment" type="Node2D" parent="."]
+[node name="Comment" parent="." instance=ExtResource("5_2bquf")]
 position = Vector2(31, 33)
 
-[node name="Text" type="RichTextLabel" parent="Comment"]
-offset_left = 1.0
-offset_right = 394.0
-offset_bottom = 65.0
-text = "Ski-bi dibby dib yo da dub dub Yo da dub dub Ski-bi dibby dib yo da dub dub Yo da dub dub"
+[node name="Option3" parent="." instance=ExtResource("6_73jmb")]
+offset_left = 743.0
+offset_top = 507.0
+offset_right = 1056.0
+offset_bottom = 604.0
 
-[node name="Option1" type="Button" parent="."]
-offset_left = 122.0
-offset_top = 503.0
-offset_right = 435.0
-offset_bottom = 600.0
-text = "Option 1 Not Set"
+[node name="Option2" parent="." instance=ExtResource("6_73jmb")]
+offset_left = 409.0
+offset_top = 508.0
+offset_right = 722.0
+offset_bottom = 605.0
 
-[node name="Option2" type="Button" parent="."]
-offset_left = 457.0
-offset_top = 503.0
-offset_right = 714.0
-offset_bottom = 600.0
-text = "Option 2 Not Set"
-
-[node name="Option3" type="Button" parent="."]
-offset_left = 750.0
-offset_top = 501.0
-offset_right = 1007.0
-offset_bottom = 598.0
-text = "Option 3 Not Set"
+[node name="Option1" parent="." instance=ExtResource("6_73jmb")]
+offset_left = 73.0
+offset_top = 505.0
+offset_right = 386.0
+offset_bottom = 602.0

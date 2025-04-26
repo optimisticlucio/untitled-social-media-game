@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dop1w0ppp7jpt"]
+
+[node name="Comment" type="Node2D"]
+
+[node name="Text" type="RichTextLabel" parent="."]
+offset_left = 1.0
+offset_right = 394.0
+offset_bottom = 65.0
+text = "Ski-bi dibby dib yo da dub dub Yo da dub dub Ski-bi dibby dib yo da dub dub Yo da dub dub"

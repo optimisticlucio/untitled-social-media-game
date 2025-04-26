@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Post" load_steps=8 format=3 uid="uid://by3yc6d24vytc"]
+
+[ext_resource type="Script" uid="uid://cb3517j678pr5" path="res://scripts/dialogue/comment.gd" id="1_3i2ht"]
+[ext_resource type="Script" uid="uid://dt2yiymblukj8" path="res://scripts/dialogue/dialogue_path.gd" id="2_adpq5"]
+[ext_resource type="Script" uid="uid://bf22ll2o4qmne" path="res://scripts/dialogue/post.gd" id="3_4syyr"]
+[ext_resource type="Resource" uid="uid://c2swrcpwc8otf" path="res://resources/posts/book_good_view.tres" id="3_mew1y"]
+[ext_resource type="Resource" uid="uid://bthsfmqmqmj3u" path="res://resources/posts/book_hard_to_find.tres" id="4_qq4wi"]
+
+[sub_resource type="Resource" id="Resource_3i2ht"]
+script = ExtResource("2_adpq5")
+text = "\"ספר טוב עם נוף טוב!\""
+leads_to = ExtResource("3_mew1y")
+metadata/_custom_type_script = "uid://dt2yiymblukj8"
+
+[sub_resource type="Resource" id="Resource_adpq5"]
+script = ExtResource("2_adpq5")
+text = "\"סוף סוף מצאתי את [שם ספר], קשה למצוא!\""
+leads_to = ExtResource("4_qq4wi")
+metadata/_custom_type_script = "uid://dt2yiymblukj8"
+
+[resource]
+script = ExtResource("3_4syyr")
+text = ""
+amount_of_likes = 0
+comments = Array[ExtResource("1_3i2ht")]([])
+dialogue_options = Array[ExtResource("2_adpq5")]([SubResource("Resource_3i2ht"), SubResource("Resource_adpq5")])
+metadata/_custom_type_script = "uid://bf22ll2o4qmne"
